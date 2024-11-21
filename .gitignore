@@ -1,0 +1,8 @@
+logs/
+my_venv/
+plugins/
+user_profiles/
+convert_profiles.py
+random_user.txt
+results.json
+
