@@ -16,7 +16,7 @@ This project is about exercising my skills on data pipeline orcehestration with 
   * Create your functions that you will use to get the data, from the APIU, extract the necessary columns, and load the data into Amazon S3.
 
   ## At the end, you will have:
-  * **random_users folder** has the:
+  * **random_users folder** which has the:
 
     * **get_data.py** - file that contains the function that gets the data from the API
 
@@ -24,7 +24,7 @@ This project is about exercising my skills on data pipeline orcehestration with 
 
     * **transfer_data.py** - file that contains the function that uploads the data to Amazon s3.
 
-* **dag_definition folder** has the:
+* **dag_definition folder** which has the:
 
     * **randon_users.py** - file that contains the DAG for the airflow orchestration.
-    
+
