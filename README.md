@@ -13,7 +13,9 @@ This project is about exercising my skills on data pipeline orcehestration with 
   * Create your projct folder
   * Deploy Airflow on Docker Compose by fetching docker-copmpose.yaml and set
   * Create your necessary files like the `.env`, `Dockerfile`, and `requirements.txt` files.
+  * Create your functions that you will use to get the data, from the APIU, extract the necessary columns, and load the data into Amazon S3.
 
+  ## At the end, you will have:
   * **random_users folder** has the:
 
     * **get_data.py** - file that contains the function that gets the data from the API
@@ -25,14 +27,4 @@ This project is about exercising my skills on data pipeline orcehestration with 
 * **dag_definition folder** has the:
 
     * **randon_users.py** - file that contains the DAG for the airflow orchestration.
-
-
-
-### Steps to Loading the Data into s3
- * Install AWS Wrangler or AWS SDK for Pandas: `pip install awswrangler`
- * Set up your AWS Credentials
-    * Download AWS CLI on your terminal
-    * Configure your AWS credentials
- * Create an s3 bucket
- * Create a function for data transfer
- * Update your dAG for the data transfer task
+    
