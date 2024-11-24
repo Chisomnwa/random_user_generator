@@ -28,16 +28,20 @@ dag = DAG(
     catchup=False
 )
 
+# Create a Python operator object that calls function that extracts the data from the API
+# Extracts the required columns and then converts it to a pandas dataframe
 convert_profiles = PythonOperator(
     dag=dag,
     task_id='convert_profiles',
     python_callable=extract_selected_columns
     )
 
+# Create a Python operator object that calls the function that loads data to s3
 load_data_to_s3 = PythonOperator(
     dag=dag,
     task_id='load_data',
     python_callable=upload_to_s3
 )
 
+# Specify the task dependencies
 convert_profiles >> load_data_to_s3

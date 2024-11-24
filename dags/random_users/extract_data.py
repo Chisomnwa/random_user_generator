@@ -2,6 +2,9 @@
 from .get_data import get_data
 
 def extract_selected_columns():
+    """
+    This function is used to extract the desired columns from the dataset.
+    """
     data = get_data()
 
     # Extract relevant columns
