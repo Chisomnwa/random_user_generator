@@ -5,7 +5,8 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import datetime
 
-from random_users.get_data import get_shape
+from random_users.extract_data import extract_selected_columns
+from random_users.transfer_to_s3 import upload_to_s3
 
 # Create default arguments
 default_args = {
@@ -30,5 +31,13 @@ dag = DAG(
 convert_profiles = PythonOperator(
     dag=dag,
     task_id='convert_profiles',
-    python_callable=get_shape
+    python_callable=extract_selected_columns
     )
+
+load_data_to_s3 = PythonOperator(
+    dag=dag,
+    task_id='load_data',
+    python_callable=upload_to_s3
+)
+
+convert_profiles >> load_data_to_s3
