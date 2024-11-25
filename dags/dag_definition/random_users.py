@@ -4,7 +4,6 @@ from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import datetime
-
 from random_users.extract_data import extract_selected_columns
 from random_users.transfer_to_s3 import upload_to_s3
 

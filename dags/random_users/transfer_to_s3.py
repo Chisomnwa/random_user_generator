@@ -1,8 +1,10 @@
 import awswrangler as wr
-import pandas as pd
 import boto3
-from .extract_data import extract_selected_columns
+import pandas as pd
 from airflow.models import Variable
+
+from .extract_data import extract_selected_columns
+
 
 def upload_to_s3():
     """
