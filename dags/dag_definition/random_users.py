@@ -4,6 +4,7 @@ from datetime import timedelta
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import datetime
+
 from random_users.extract_data import extract_selected_columns
 from random_users.transfer_to_s3 import upload_to_s3
 
@@ -27,7 +28,8 @@ dag = DAG(
     catchup=False
 )
 
-# Create a Python operator object that calls function that extracts the data from the API
+# Create a Python operator object that calls function that extracts
+# the data from the API
 # Extracts the required columns and then converts it to a pandas dataframe
 convert_profiles = PythonOperator(
     dag=dag,
