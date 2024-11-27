@@ -1,7 +1,7 @@
 import awswrangler as wr
 
-from .aws_session import session
-from .extract_data import extract_selected_columns
+from aws import session
+from extract_data import extract_selected_columns
 
 
 def upload_to_s3():
