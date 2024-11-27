@@ -2,6 +2,7 @@ logs/
 my_venv/
 plugins/
 user_profiles/
+__pycache__/
 convert_profiles.py
 random_user.txt
 results.json
