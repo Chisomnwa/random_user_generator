@@ -15,16 +15,14 @@ This project is about exercising my skills on data pipeline orcehestration with 
   * Create your necessary files like the `.env`, `Dockerfile`, and `requirements.txt` files.
   * Create your functions that you will use to get the data, from the APIU, extract the necessary columns, and load the data into Amazon S3.
 
-  ## At the end, you will have:
-  * **random_users folder** which has the:
-
-    * **get_data.py** - file that contains the function that gets the data from the API
-
-    * **extract_data.py** - file that contains the function that extracts the necessary columns from the downloaded data
-
-    * **transfer_data.py** - file that contains the function that uploads the data to Amazon s3.
-
+  ## At the end, under the dag folder, you will have:
 * **dag_definition folder** which has the:
 
     * **randon_users.py** - file that contains the DAG for the airflow orchestration.
+
+* **utils folder** which has the:
+
+    * **extract_data.py** - file that contains the functions that gets the data from the API and also extracts the necessary columns from the downloaded data
+
+    * **transfer_data.py** - file that contains the function that uploads the data to Amazon s3.
 
