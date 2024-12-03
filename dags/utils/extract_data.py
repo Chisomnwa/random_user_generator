@@ -2,6 +2,7 @@
 import pandas as pd
 import requests
 
+
 def get_api_data():
     """
     This function is used to get the 100 random profiles data
